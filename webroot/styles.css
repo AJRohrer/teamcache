@@ -1,14 +1,27 @@
 .titleBar{
     background-color:#0066ff;
-    color: white;
-    font-family: trebuchet MS;
     font-size: 32px;
     text-decoration: none;
     line-height: 80px;
-    height: 80px
+    height: 80px;
+    position: absolute;
+    left:0; 
+    right:0;
 }
 
-html,body{
-    margin: 0;
-    padding: 0;
+.navBar {
+    background-color: #0066ff;
+    position:absolute;
+    left:0; top:92px; bottom: 0;
+    width: 178px;
+}
+
+.mainContent {
+    position: absolute;
+    left:178px; top:80px; right:0; bottom:0;
+}
+
+.standardFont{
+    font-family: 'Trebuchet MS';
+    color: white;
 }
