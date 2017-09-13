@@ -1,13 +1,19 @@
 .titleBar{
-    background-color:#0066ff;
     font-size: 32px;
     text-decoration: none;
     line-height: 80px;
     height: 80px;
     position: absolute;
+    top:0;
     left:0; 
     right:0;
-    color: white;
+}
+
+.titleBarRight{
+    font-size: 16px;
+    position: absolute;
+    right: 30px;
+    top: 50px
 }
 
 .navBar {
@@ -24,15 +30,22 @@
     position: absolute;
     left:178px; 
     top:110px; 
-    right:0; 
-    bottom:0;
 }
 
 .standardFont{
     font-family: 'Trebuchet MS';
 }
 
+.standardColor{
+    color: white;
+    background-color:#0066ff;
+}
+
 ul {
     list-style: none;
     padding: none;
+}
+
+.pointerHand{
+    cursor: pointer;
 }
