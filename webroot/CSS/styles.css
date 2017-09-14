@@ -30,6 +30,8 @@
     position: absolute;
     left:178px; 
     top:110px; 
+    height:900px;
+    width:900px;
 }
 
 .standardFont{

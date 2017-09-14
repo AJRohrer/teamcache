@@ -1,5 +1,5 @@
 function loadLoginPage() {
     
     var actvtyspc = document.getElementById("activitySpace");
-    actvtyspc.innerHTML='<object type="text/html" data="login.html" ></object>';
+    actvtyspc.innerHTML='<object style="height:100%; width:100%" type="text/html" data="login.html" ></object>';
 }
