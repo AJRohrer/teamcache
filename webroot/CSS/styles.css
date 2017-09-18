@@ -1,3 +1,4 @@
+/*Positions on the page*/
 .titleBar{
     font-size: 32px;
     text-decoration: none;
@@ -7,6 +8,14 @@
     top:0;
     left:0; 
     right:0;
+}
+
+.titleBarMiddle{
+    margin: 20px;
+    margin-top: 45px;
+    margin-left: 175px;
+    position: absolute;
+    cursor: pointer;
 }
 
 .titleBarRight{
@@ -33,6 +42,7 @@
     height:900px;
     width:900px;
 }
+/*Positions on the page END*/
 
 .standardFont{
     font-family: 'Trebuchet MS';
@@ -44,10 +54,21 @@
 }
 
 ul {
-    list-style: none;
-    padding: none;
+    display: inline;
+    list-style-type: none;
+    margin: 20px;
+}
+
+li:hover {
+    color:grey;
+    background-color: #0066ff;
+    cursor: pointer;
 }
 
 .pointerHand{
     cursor: pointer;
+}
+
+.menuOption{
+    margin: 30px;
 }
