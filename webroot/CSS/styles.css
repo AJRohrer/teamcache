@@ -18,6 +18,11 @@
     cursor: pointer;
 }
 
+.menuOption:hover{
+    background-color: lightgray;
+    color: black;
+}
+
 .titleBarRight{
     font-size: 16px;
     position: absolute;
