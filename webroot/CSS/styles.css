@@ -49,6 +49,7 @@
 }
 /*Positions on the page END*/
 
+/*standard font/color to be used everywhere on the page.*/
 .standardFont{
     font-family: 'Trebuchet MS';
 }
@@ -57,6 +58,7 @@
     color: white;
     background-color:#0066ff;
 }
+/*standard font/color to be used everywhere on the page. END*/
 
 ul {
     display: inline;
