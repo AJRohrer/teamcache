@@ -21,6 +21,7 @@
 .menuOption:hover{
     background-color: lightgray;
     color: black;
+    border-radius: 5px 5px 5px 5px;
 }
 
 .titleBarRight{
