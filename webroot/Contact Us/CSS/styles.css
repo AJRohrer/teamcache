@@ -1,0 +1,82 @@
+/*Positions on the page*/
+.titleBar{
+    font-size: 32px;
+    text-decoration: none;
+    line-height: 80px;
+    height: 80px;
+    position: absolute;
+    top:0;
+    left:0; 
+    right:0;
+}
+
+.titleBarMiddle{
+    margin: 20px;
+    margin-top: 45px;
+    margin-left: 175px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.menuOption:hover{
+    background-color: lightgray;
+    color: black;
+    border-radius: 5px 5px 5px 5px;
+}
+
+.titleBarRight{
+    font-size: 16px;
+    position: absolute;
+    right: 30px;
+    top: 50px
+}
+
+.navBar {
+    background-color: lightgrey;
+    position:absolute;
+    left:0; 
+    top:110px; 
+    bottom: 0;
+    width: 178px;
+    color: black;
+}
+
+.mainContent {
+    position: absolute;
+    left:178px; 
+    top:110px; 
+    height:900px;
+    width:900px;
+}
+/*Positions on the page END*/
+
+/*standard font/color to be used everywhere on the page.*/
+.standardFont{
+    font-family: 'Trebuchet MS';
+}
+
+.standardColor{
+    color: white;
+    background-color:#0066ff;
+}
+/*standard font/color to be used everywhere on the page. END*/
+
+ul {
+    display: inline;
+    list-style-type: none;
+    margin: 20px;
+}
+
+li:hover {
+    color:grey;
+    background-color: #0066ff;
+    cursor: pointer;
+}
+
+.pointerHand{
+    cursor: pointer;
+}
+
+.menuOption{
+    margin: 30px;
+}
