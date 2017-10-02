@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\webroot",
+    "\\webroot\\Landing",
     "\\webroot\\log-in",
     "\\webroot\\log-in\\css",
+    "\\webroot\\MainPage",
+    "\\webroot\\MainPage\\JS",
     "\\webroot\\Registration",
     "\\webroot\\Registration\\CSS"
   ],
+  "SelectedNode": "\\webroot\\Landing\\Landing.html",
   "PreviewInSolutionExplorer": false
 }
