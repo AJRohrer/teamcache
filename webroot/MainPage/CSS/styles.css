@@ -12,10 +12,17 @@
 
 .titleBarMiddle{
     margin: 20px;
-    margin-top: 45px;
+    margin-top: 35px;
     margin-left: 175px;
     position: absolute;
     cursor: pointer;
+}
+
+.titleBarRight{
+    font-size: 16px;
+    position: absolute;
+    right: 30px;
+    top: 50px
 }
 
 .menuOption:hover{
@@ -24,11 +31,8 @@
     border-radius: 5px 5px 5px 5px;
 }
 
-.titleBarRight{
-    font-size: 16px;
-    position: absolute;
-    right: 30px;
-    top: 50px
+.menuOption{
+    margin: 30px;
 }
 
 .navBar {
@@ -46,7 +50,7 @@
     margin-left: auto;
     height: 2000px;
     width:1400px;
-    background-color: lightgray;
+    background-color: white;
     position: relative;
     top: 120px;
 }
@@ -69,21 +73,38 @@ ul {
     margin: 20px;
 }
 
-li:hover {
-    color:grey;
-    background-color: #0066ff;
-    cursor: pointer;
-}
-
 .pointerHand{
     cursor: pointer;
 }
 
-.menuOption{
-    margin: 30px;
+.projectCard{
+    background: #0066ff;
+    border-color: white;
+    width: 25%;
+    border-radius: 25px 25px 25px 25px;
+    padding-left: 15px;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
 }
 
-.projectCard{
-    background: lightblue;
-    border-color: white;
+.cardMedia{
+    width: 320px;
+    height: 240px;
+}
+
+.cardLinks{
+    margin:20px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.cardLinks > li{
+    display: inline-block;
+}
+
+.cardLinks:hover{
+    background-color: lightgray;
+    color: black;
+    border-radius: 5px 5px 5px 5px;
 }
