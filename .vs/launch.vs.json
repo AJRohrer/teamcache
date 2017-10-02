@@ -39,6 +39,17 @@
       "MIMode": "gdb",
       "miDebuggerPath": "${env.MINGW_PREFIX}\\bin\\gdb.exe",
       "externalConsole": true
+    },
+    {
+      "type": "cppdbg",
+      "name": "Landing",
+      "project": "webroot\\Landing",
+      "cwd": "${workspaceRoot}",
+      "program": "${debugInfo.target}",
+      "processId": 0,
+      "MIMode": "gdb",
+      "miDebuggerPath": "${env.MINGW_PREFIX}\\bin\\gdb.exe",
+      "externalConsole": true
     }
   ]
 }
