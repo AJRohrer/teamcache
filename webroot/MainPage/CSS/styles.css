@@ -12,10 +12,17 @@
 
 .titleBarMiddle{
     margin: 20px;
-    margin-top: 45px;
+    margin-top: 35px;
     margin-left: 175px;
     position: absolute;
     cursor: pointer;
+}
+
+.titleBarRight{
+    font-size: 16px;
+    position: absolute;
+    right: 30px;
+    top: 50px
 }
 
 .menuOption:hover{
@@ -24,11 +31,8 @@
     border-radius: 5px 5px 5px 5px;
 }
 
-.titleBarRight{
-    font-size: 16px;
-    position: absolute;
-    right: 30px;
-    top: 50px
+.menuOption{
+    margin: 30px;
 }
 
 .navBar {
@@ -42,11 +46,13 @@
 }
 
 .mainContent {
-    position: absolute;
-    left:178px; 
-    top:110px; 
-    height:900px;
-    width:900px;
+    margin-right:auto;
+    margin-left: auto;
+    height: 2000px;
+    width:1400px;
+    background-color: white;
+    position: relative;
+    top: 120px;
 }
 /*Positions on the page END*/
 
@@ -67,16 +73,65 @@ ul {
     margin: 20px;
 }
 
-li:hover {
-    color:grey;
-    background-color: #0066ff;
-    cursor: pointer;
-}
-
 .pointerHand{
     cursor: pointer;
 }
 
-.menuOption{
-    margin: 30px;
+.projectCard{
+    background: #0066ff;
+    border-color: white;
+    border-radius: 25px 25px 25px 25px;
 }
+
+.cardMedia{
+    width: 320px;
+    height: 240px;
+}
+
+.cardLinks{
+    margin:20px;
+    font-size: 16px;
+    list-style-type: none;
+}
+
+.cardLinks > li{
+    display: inline-block;
+}
+
+.cardLinks:hover{
+    background-color: lightgray;
+    color: black;
+    border-radius: 5px 5px 5px 5px;
+}
+
+/*CSS grid*/
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(25%, auto);
+  }
+  .one {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .two { 
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+  }
+  .three {
+    grid-column: 1;
+    grid-row: 2 / 5;
+  }
+  .four {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  .five {
+    grid-column: 2;
+    grid-row: 4;
+  }
+  .six {
+    grid-column: 3;
+    grid-row: 4;
+  }
