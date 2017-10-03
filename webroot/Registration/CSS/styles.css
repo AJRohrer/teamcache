@@ -16,7 +16,7 @@ body {
     height:410px;
     top: 35%;
     left: 50%;
-    margin:-200px 0 0 -150px;
+    margin:-205px 0 0 -160px;
     background-color: #F7F7F7;
     border-radius: 2px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -52,5 +52,12 @@ body {
 .form{
     text-align: center;
 }
+
+label{
+    display:inline-block;
+    width:120px;
+    font-size:xx-small;
+}
+
 
 
