@@ -60,26 +60,26 @@ li a {
 .brand {
     float: left;
     font-size: 50px;
-    left: 20px;
-    top: 2px;
+    left: .1em;
+    top: .01em;
 }
 
 .center {
     /*the center text "a new way to..."*/
     text-align: left;
     position: relative;
-    top: 400px;
+    top: 4.9em;
     font-size: 80px;
-    left: 10px;
+    left: .1em;
     font-family: "Roboto";
 }
 
 .center-sub {
     text-align: left;
     position: relative;
-    top: 330px;
-    font-size: 65px;
-    left: 10px;
+    top: 4.6em;
+    font-size: 4.5em;
+    left: .1em;
     font-family: "Roboto";
 }
 
@@ -150,8 +150,8 @@ li a {
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     position: relative;
-    top: 295px;
-    left: 10px;
+    top: 6em;
+    left: .01em;
 }
 
 .btn-signup:hover {
