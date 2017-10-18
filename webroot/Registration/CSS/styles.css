@@ -13,24 +13,22 @@ body {
     position:absolute;
     padding-bottom:40px;
     width: 320px;
-    height:410px;
+    height:450px;
     top: 35%;
     left: 50%;
-    margin:-205px 0 0 -160px;
+    margin:-180px 0 0 -160px;
     background-color: #F7F7F7;
+    text-align: center;
     border-radius: 2px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     overflow: hidden;
 }
 
 .login-card h1{
-    text-align:center;
-    padding-top:0px;
     font-weight:bold;
 }
 .login-card h2{
-    text-align:center;
-    font-weight:lighter;
+    font-weight: 100;
     font-size:1.6em;
 }
 
@@ -49,15 +47,69 @@ body {
     background-color: rgb(0, 170, 255);
 }
 
-.form{
+.login-card input[type=text],
+input[type=password] {
+    font-size: 16px;
     text-align: center;
+    margin-top: -10px;
+    width: 80%;
+    height: 30px;
+    -webkit-appearance: none;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+    border-top: 1px solid #c0c0c0;
+    /* border-radius: 2px; */
+    padding: 0 8px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
 }
 
-label{
-    display:inline-block;
-    width:120px;
-    font-size:xx-small;
+.login-card input[type=text]:hover,
+input[type=password]:hover {
+    border: 1px solid #b9b9b9;
+    border-top: 1px solid #a0a0a0;
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+.login-card input[type=submit]{
+    width: 80%;
+    margin-top: -10px;
+    height: 30px;
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    background-color: #4d90fe;
+}
 
+.login-card input[type=submit]:hover{
+    width: 80%;
+    height: 30px;
+    border: 0px;
+    color: #fff;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    background-color: #357ae8;
+}
+
+.login-help{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.login-card a{
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    margin-top: -10px;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.6;
+    transition: opacity ease 0.3s;
+}
+
+.login-card a:hover{
+    opacity: 2;
+}
 
