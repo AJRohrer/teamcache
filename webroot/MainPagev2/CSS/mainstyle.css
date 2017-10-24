@@ -170,8 +170,12 @@
        .six {
            grid-column: 3;
            grid-row: 2;
-           grid-row: 4;
        }
+
+       .seven {
+            grid-column: 1;
+            grid-row: 3;
+        }
        
        .mainContent {
            margin-right: auto;
