@@ -12,15 +12,11 @@ body {
 .login-card {
     position:absolute;
     padding-bottom:40px;
-    width: 320px;
-    height:450px;
+    width: 16em;
+    height:23em;
     top: 35%;
     left: 50%;
-<<<<<<< HEAD
-    margin:-200px 0 0 -150px;
-=======
     margin:-180px 0 0 -160px;
->>>>>>> added username to registration page
     background-color: #F7F7F7;
     text-align: center;
     border-radius: 2px;
@@ -87,8 +83,6 @@ input[type=password]:hover {
     background-color: #4d90fe;
 }
 
-<<<<<<< HEAD
-=======
 .login-card input[type=submit]:hover{
     width: 80%;
     height: 30px;
@@ -118,5 +112,4 @@ input[type=password]:hover {
 .login-card a:hover{
     opacity: 2;
 }
->>>>>>> added username to registration page
 
