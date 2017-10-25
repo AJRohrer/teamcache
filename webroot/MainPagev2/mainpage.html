@@ -9,6 +9,7 @@
     <meta name="description" content="Your Homepage for InspireLab">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="CSS\mainstyle.css">
+    <script scr="JS\mainpage.js"></script>
     <title>Home-InspireLab</title>
 </head>
 
@@ -37,7 +38,11 @@
     <section>
         <section id="activitySpace" class="mainContent wrapper">
             <article class="projectCard standardColor one">
-                <h2>How to view stars</h2>
+                <div>
+                    <h2>How to view stars</h2>
+                    <h1 id="favorite" title="Favorite" onclick="favorite()" class="favorite"> &#9733</h1>
+                </div>
+                
                 <ul>
                     <li class="cardLink">
                         Step 1: Get a telescope
@@ -58,7 +63,6 @@
                     </li>
                     <li>
                         <div class="centerThis">
-                            <span class="cardLinks">Favorite</span>
                             <span class="cardLinks">Share</span>
                             <span class="cardLinks">Follow</span>
                         </div>

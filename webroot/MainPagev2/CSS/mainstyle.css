@@ -380,3 +380,21 @@
                left: 0;
            }
        }
+       .favorite{
+            float: right;
+            margin: 0;           
+            font-size: 35px;
+            text-shadow: 1px 1px black;
+            color:white;
+       }
+
+      .favorite:hover{
+          cursor: pointer;
+          text-shadow: 2px 2px black;
+          user-select: none;
+      }
+
+       h2{
+           display: inline-block;
+       }
+       
