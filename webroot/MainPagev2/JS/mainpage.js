@@ -12,3 +12,15 @@ for (i = 0; i < acc.length; i++) {
         }
     }
 }
+
+var clicked = false;
+function favorite(){
+    var favorite = document.getElementById("favorite");
+    if(clicked==false){
+        favorite.style.color = "yellow";
+        clicked = true;
+    }else{
+        favorite.style.color = "white";
+        clicked = false;
+    }
+}
