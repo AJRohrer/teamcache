@@ -14,7 +14,7 @@ mongoose.connect("mongodb://localhost:27017/node-test",{ useMongoClient: true })
 var nameSchema = new mongoose.Schema({
     proname: {type:String},
     detailmain: {type:String},
-    details: [Schem.Types.Mixed]
+    details: [Schema.Types.Mixed]
 },{strict: false});
 
 var User = mongoose.model("Project", nameSchema);
