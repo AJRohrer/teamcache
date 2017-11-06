@@ -1,18 +1,3 @@
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function() {
-        this.classList.toggle("active");
-        var panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
-    }
-}
-
 var clicked = false;
 function favorite(){
     var favorite = document.getElementById("favorite");
@@ -35,21 +20,12 @@ var view = {
 };
 
 function addItem(container, template) {
-    
     container.append(Mustache.render(template, view));
-  }
+};
   
-  $(() => {
+/*This runs on start of the website.*/
+$(() => {
     const tmpl = $('#project_template').html()
     const container = $('#activitySpace');
-    
-    for(let i=0; i<5; i++) { addItem(container, tmpl); }
-    
-    $('#add_el').click(() => {
-      addItem(container, tmpl);
-    })
-    
-    container.on('click', '.del_el', (e) => {
-      $(e.target).closest('.item').remove();
-    });
-  });
+    for(let i=0; i<3; i++) { addItem(container, tmpl); }
+});
