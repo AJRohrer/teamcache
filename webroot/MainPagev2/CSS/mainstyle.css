@@ -134,12 +134,15 @@
        }
        /*CSS grid*/
        
-       .wrapper {
+       .container {
            display: grid;
            grid-template-columns: repeat(3, 1fr);
            grid-gap: 10px;
-           grid-auto-rows: 33%;
-           grid-auto-columns: minmax(auto, auto);
+           grid-template-rows: repeat(auto-fill, 120px);
+       }
+
+       .container .item{
+
        }
        
        .one {

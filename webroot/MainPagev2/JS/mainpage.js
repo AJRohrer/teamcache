@@ -24,3 +24,32 @@ function favorite(){
         clicked = false;
     }
 }
+
+var view = {
+    Title: "View Stars",
+    Step1: "Get a telescope",
+    Step2: "Set a viewing angle",
+    Step3: "Look through the lense",
+    Video: "<source src=\"../media/video/stars.mp4\" type=\"video/mp4\">",
+    Picture: "<img src=\"../media/images/stars.jpg\" class=\"cardMedia\">"
+};
+
+function addItem(container, template) {
+    
+    container.append(Mustache.render(template, view));
+  }
+  
+  $(() => {
+    const tmpl = $('#project_template').html()
+    const container = $('#activitySpace');
+    
+    for(let i=0; i<5; i++) { addItem(container, tmpl); }
+    
+    $('#add_el').click(() => {
+      addItem(container, tmpl);
+    })
+    
+    container.on('click', '.del_el', (e) => {
+      $(e.target).closest('.item').remove();
+    });
+  });
