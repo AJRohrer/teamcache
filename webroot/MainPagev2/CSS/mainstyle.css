@@ -138,7 +138,7 @@
            display: grid;
            grid-template-columns: repeat(3, 1fr);
            grid-gap: 10px;
-           grid-template-rows: repeat(auto-fill, 120px);
+           box-sizing: border-box;
        }
 
        .container .item{

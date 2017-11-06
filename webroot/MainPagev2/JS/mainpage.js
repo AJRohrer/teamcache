@@ -27,5 +27,5 @@ function addItem(container, template) {
 $(() => {
     const tmpl = $('#project_template').html()
     const container = $('#activitySpace');
-    for(let i=0; i<3; i++) { addItem(container, tmpl); }
+    for(let i=0; i<9; i++) { addItem(container, tmpl); }
 });
