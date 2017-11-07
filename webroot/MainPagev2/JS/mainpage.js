@@ -24,3 +24,27 @@ function favorite(){
         clicked = false;
     }
 }
+
+function displayFileUpload(){
+    document.getElementById("file").setAttribute("style","visibility: visible");
+}
+
+var fileClose = document.getElementById("file-close");
+fileClose.onclick = function(){
+    document.getElementById("file").setAttribute("style","visibility: hidden")
+}
+
+document.getElementById("fileName").onchange = function(evt){
+    var target = evt.target || window.event.srcElement, files =target.files;
+
+    if(FileReader && files && files.length){
+        var reader = new FileReader();
+        reader.onload = function(){
+            document.getElementById("profileImg").src = reader.result;
+        }
+        reader.readAsDataURL(files[0]);
+        document.getElementById("file").setAttribute("style","visibility: hidden")
+    }else{
+        alert("booooo");
+    }
+}
