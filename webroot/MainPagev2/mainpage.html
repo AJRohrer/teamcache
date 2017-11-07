@@ -43,12 +43,9 @@
                     <input type="text" name="search" placeholder="Search..">
                 </form>
             </li>
-            <li class="nav-right">
-                <button class="accordion">Username</button>
-            </li>
-            <li class="nav-right">
-                <img class="profile-avatar__image" src="Image\profilepic.jpg">
-            </li>
+            <li class="nav-right"><button class="accordion">Username</button></li>
+            <li class="nav-right"><img id="profileImg" class="profile-avatar__image" src="Image\profilepic.jpg" onclick="displayFileUpload()"></li>
+            
             <li class="nav-right">
                 <button class="updates-button">
                     <i class="fa fa-bell"></i>
@@ -56,6 +53,13 @@
             </li>
         </ul>
     </nav>
+    <div class="file-upload" id="file"><!-- user profile picture -->
+        <span class="changePic">Change Profile Picture</span>
+        <form class="file-form"> 
+            <input type="file" id="fileName" accept="image/*">
+        </form>
+        <span class="file-close" id="file-close">&#10006</span>
+    </div>
     <section>
         <section id="activitySpace" class="mainContent container">
             <template id="project_template">
