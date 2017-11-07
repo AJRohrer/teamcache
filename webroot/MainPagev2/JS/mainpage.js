@@ -29,3 +29,17 @@ $(() => {
     const container = $('#activitySpace');
     for(let i=0; i<9; i++) { addItem(container, tmpl); }
 });
+
+//Get project data from a json format. This will eventually call the database that will return
+//json data.
+function getProjects() {
+    var $deferredNotesRequest = $.getJSON("../data/testprojects.json", {format: "json"});
+}
+
+//when getProjects request is done render each of the project tiles.
+$.when(getProjects()).done(function(response){
+    var $projects = response.projectProperties //projectProperties is the name in the json file.
+    $projects.forEach(function(item){
+        createProject(item.project);
+    });
+});
