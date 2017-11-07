@@ -145,6 +145,21 @@
 
        }
        
+       
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.flex-item {
+    Flex-basis: 33%; 	/*default size before extra (minimum size)*/
+    Flex-grow: 1;		/*all items will be equal*/
+}
+
+
        .mainContent {
            margin-right: auto;
            margin-left: auto;

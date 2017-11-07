@@ -15,8 +15,8 @@ var view = {
     Step1: "Get a telescope",
     Step2: "Set a viewing angle",
     Step3: "Look through the lense",
-    Video: "<source src=\"../media/video/stars.mp4\" type=\"video/mp4\">",
-    Picture: "<img src=\"../media/images/stars.jpg\" class=\"cardMedia\">"
+    Video: "../media/video/stars.mp4",
+    Picture: "../media/images/stars.jpg"
 };
 
 function addItem(container, template) {
