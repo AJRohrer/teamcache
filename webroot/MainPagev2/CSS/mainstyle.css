@@ -138,56 +138,39 @@
        }
        /*CSS grid*/
        
-       .wrapper {
+       .container {
            display: grid;
            grid-template-columns: repeat(3, 1fr);
            grid-gap: 10px;
-           grid-auto-rows: 33%;
-           grid-auto-columns: minmax(auto, auto);
-       }
-       
-       .one {
-           grid-column: 1;
-           grid-row: 1;
-       }
-       
-       .two {
-           grid-column: 2;
-           grid-row: 1;
-       }
-       
-       .three {
-           grid-column: 3;
-           grid-row: 1;
-       }
-       
-       .four {
-           grid-column: 1;
-           grid-row: 2;
-       }
-       
-       .five {
-           grid-column: 2;
-           grid-row: 2;
-       }
-       
-       .six {
-           grid-column: 3;
-           grid-row: 2;
+           box-sizing: border-box;
        }
 
-       .seven {
-            grid-column: 1;
-            grid-row: 3;
-        }
+       .container .item{
+
+       }
        
+       
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.flex-item {
+    Flex-basis: 33%; 	/*default size before extra (minimum size)*/
+    Flex-grow: 1;		/*all items will be equal*/
+}
+
+
        .mainContent {
            margin-right: auto;
            margin-left: auto;
-           width: 1400px;
+           width: 85%;
            background-color: white;
            position: relative;
-           top: 120px;
+           top: 60px;
        }
        
        .standardFont {
@@ -212,7 +195,7 @@
        .projectCard {
            background: #0066ff;
            border-color: white;
-           border-radius: 25px 25px 25px 25px;
+           border-radius: 15px 15px 15px 15px;
            padding: 20px;
        }
        
