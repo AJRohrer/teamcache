@@ -31,7 +31,7 @@ document.getElementById("fileName").onchange = function(evt){
         reader.readAsDataURL(files[0]);
         document.getElementById("file").setAttribute("style","visibility: hidden");
     }else{
-        alert("File not supported); 
+        alert("File not supported"); 
     }
 }
 var view = {
