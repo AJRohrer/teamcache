@@ -1,0 +1,19 @@
+{
+  "name": "inspirelab",
+  "version": "1.0.0",
+  "description": "Inspire people to innovate",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AJRohrer/teamcache.git"
+  },
+  "author": "teamcache",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AJRohrer/teamcache/issues"
+  },
+  "homepage": "https://github.com/AJRohrer/teamcache#readme"
+}
