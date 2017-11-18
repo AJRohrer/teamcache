@@ -1,5 +1,5 @@
 /*Flexbox css
-il- is short for inspirelab.
+il- is short for inspirelab. This eliminates the possibility of collision with bootstrap classes.
 */
 .il-container {
     display: flex;
