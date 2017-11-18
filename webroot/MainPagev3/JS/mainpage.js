@@ -1,12 +1,11 @@
-var clicked = false;
-function favorite(){
-    var favorite = document.getElementById("favorite");
-    if(clicked==false){
-        favorite.style.color = "yellow";
-        clicked = true;
-    }else{
-        favorite.style.color = "white";
-        clicked = false;
+function toggleFavorite(myelement){
+    if (myelement.style.color != "red"){
+        myelement.style.color = "red";
+        //add item to user favorites here once connected to db.
+    }
+    else{
+        myelement.style.color = "white";
+        //remove item from user favorites here once connected to db.
     }
 }
 

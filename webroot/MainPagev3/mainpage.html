@@ -58,24 +58,32 @@
 
 
     <section class="il-container">
+        <!-- Create blank sidebar to center tiles in center of page-->
         <article class="il-leftsidebar">
             This should be whitespace
         </article>
+        <!-- Create blank sidebar to center tiles in center of page-->
 
+        <!-- Create container for all tiles on the main page.-->
         <article class="il-maincontent">
             <section id="activitySpace" class="il-container">
+                <!-- Each tile is contained in a template-->
                 <template id="project_template">
+                    <!-- Each template is a container itself-->
                     <section class="il-container-projectCard standardColor">
+                        <!-- The project information is in articles-->
                         <article class="il-item-projectcard">
-                            <section class="il-container">
+                            <!-- This article has its own container inside but is still seen as one article to the parent container-->
+                            <section class="il-item-cardtitle">
                                 <article class="il-item">
                                     <h2> {{Title}} </h2>
                                 </article>
 
-                                <article class="il-item">
-                                    <span class="glyphicon glyphicon-heart"></span>
+                                <article class="il-item-heart">
+                                    <span class="glyphicon glyphicon-heart" onclick="toggleFavorite(this)"></span>
                                 </article>
                             </section>
+                            <!-- This article has its own container inside but is still seen as one article to the parent container-->
                         </article>
 
                         <article class="il-item-projectcard ">
@@ -92,12 +100,12 @@
 
                         <article class="il-item-projectcard ">
                             <video class="cardMedia" controls>
-                                <source src={ {Video}} type="video/mp4">
+                                <source src= {{Video}} type="video/mp4">
                             </video>
                         </article>
 
                         <article class="il-item-projectcard">
-                            <img class="cardMedia" src={ {Picture}}>
+                            <img class="cardMedia" src= {{Picture}}>
                         </article>
 
                         <article class="il-item-projectcard">
@@ -111,10 +119,14 @@
                                 </article>
                             </section>
                         </article>
+                        <!-- The project information is in articles-->
                     </section>
+                    <!-- Each template is a container itself-->
                 </template>
+                <!-- Each tile is contained in a template-->
             </section>
         </article>
+        <!-- Create container for all tiles on the main page.-->
 
         <article class="il-newsfeed">
 

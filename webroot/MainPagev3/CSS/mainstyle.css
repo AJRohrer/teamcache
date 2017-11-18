@@ -11,18 +11,43 @@ il- is short for inspirelab.
     width:"8%";
 }
 
+.il-item-heart{
+    flex-grow: 1;
+    width:"8%";
+    font-size: 24px;
+    text-align: right;
+    margin-right: 10px;
+    color:white;
+}
+
+.il-item-heart:hover {
+    color: lightgray;
+}
+
+.il-item-heart:checked{
+    color: red;
+}
+
 .il-item-fullwidth{
     flex-grow: 1;
     width:100%;
+}
+
+.il-item-cardtitle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
 }
 
 .il-item:hover {
     cursor: pointer;
 }
 
-.li-leftsidebar{
+.il-leftsidebar{
     /*First: don't grow, second: don't shrink, third, start at 230px*/
-    flex: 0 0 25%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 230px;
 }
 
 .il-maincontent {
