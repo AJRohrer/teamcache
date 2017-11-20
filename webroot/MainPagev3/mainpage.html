@@ -21,8 +21,19 @@
 
 <body>
     <nav>
-        <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="mySidenav" class="il-leftsidebar sidenav">
+            <div class="toppart">
+                <div class="logo">
+                    <img class="logo" src="Image\cloud.png" alt="Logo for InspireLab" >
+                </div>
+                <img id="profileImg" class="profile-avatar__image" src="Image\profilepic.jpg" onclick="displayFileUpload()">
+                <button class="accordion">Username</button>
+                <div class="panel">
+                  <p>Settings</p>
+                </div>
+                <!-- <button class="updates-button"><i class="fa fa-bell"></i></button> May Not have time implement this... -->
+            </div>
+            <a href="javascript:void(0)" class="closey closebtn" onclick="closeNav()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
             <a href="#">My Projects</a>
             <a href="#">Favorites</a>
             <a href="#">Following</a>
