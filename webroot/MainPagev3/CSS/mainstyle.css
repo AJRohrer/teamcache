@@ -136,6 +136,8 @@ h2{
     color:white;
     border-radius: 25px;
     border:2px solid black;
+    position:fixed;
+    margin-bottom:1em;
 }
 .il-leftsidebar{
     height: 75%;
