@@ -129,6 +129,14 @@ h2{
 }
 
 /*Side-Nav*/
+.open{
+    display:block;
+    background-color:rgb(9, 46, 255);
+    width:125px;
+    color:white;
+    border-radius: 25px;
+    border:2px solid black;
+}
 .il-leftsidebar{
     height: 75%;
     width: 0;
@@ -140,7 +148,6 @@ h2{
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    margin-top:4em;
 }
 
 .il-leftsidebar a {
@@ -165,6 +172,7 @@ h2{
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    margin-top:-.06em;
     margin-bottom:2em;
 }
 
@@ -188,44 +196,58 @@ h2{
     -o-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
     transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
 }
-
 .profile-avatar__image {
-    width: 4em;
-    height: 4em;
+    width: 7em;
+    height: 7em;
     position: relative;
     border-radius: 50px;
-    margin-right: .3em;
-    margin-top:2em;
-    margin-left:2em;
+    margin:2em 5.2em;
 }
 
 .profile-avatar__image:hover{
     cursor: pointer;
 }
 button.accordion {
-    background-color: #eee;
-    color: #444;
+    color: white;
     cursor: pointer;
     padding: 18px;
     width: 100%;
-    text-align: left;
     border: none;
+    text-align: left;
     outline: none;
+    font-size: 15px;
     transition: 0.4s;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 button.accordion.active, button.accordion:hover {
-    background-color: #ccc;
 }
 
-/* Style the accordion panel. Note: hidden by default */
 div.panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+/*search*/
+input[type=text] {
+    margin-left:3em;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://www.w3schools.com/howto/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
 }
 /*Logo*/
 .inspire {
