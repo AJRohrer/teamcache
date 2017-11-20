@@ -21,40 +21,15 @@
 
 <body>
     <nav>
-        <section class="il-container topNav">
-            <article class="il-item standardFontandColor">
-                <span class="inspire">Inspire
-                    <span class="lab">Lab</span>
-                </span>
-            </article>
-
-            <!-- class standardFontandColor has to be applied to <a> tag to override bootstrap -->
-            <article class="il-item">
-                <a class="standardFontandColor">My Projects</a>
-            </article>
-
-            <article class="il-item standardFontandColor">
-                <a class="standardFontandColor">Favorite Projects</a>
-            </article>
-
-            <article class="il-item standardFontandColor">
-                <a class="standardFontandColor">Following</a>
-            </article>
-
-            <article class="il-item standardFontandColor">
-                <a class="standardFontandColor">Our Top Picks</a>
-            </article>
-
-            <article class="il-item">
-                <div class="input-group">
-                    <input class="form-control" type="text" placeholder="Search...">
-                    <div class="input-group-addon">
-                        <span class="searchicon glyphicon glyphicon-search"></span>
-                    </div>
-                </div>
-            </article>
-        </section>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">My Projects</a>
+            <a href="#">Favorites</a>
+            <a href="#">Following</a>
+            <a href="#">Our Top Picks</a>
+        </div>
     </nav>
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
 
     <section class="il-container">
