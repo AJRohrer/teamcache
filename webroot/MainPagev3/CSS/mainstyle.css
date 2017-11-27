@@ -8,7 +8,7 @@ il- is short for inspirelab. This eliminates the possibility of collision with b
 
 .il-item{
     flex-grow: 1;
-    width:"8%";
+    width: 8%;
 }
 
 .il-item-heart{
@@ -74,6 +74,10 @@ il- is short for inspirelab. This eliminates the possibility of collision with b
     width:100%;
 }
 
+.il-textbox {
+    background-color: white;
+}
+
 /*Flexbox css*/
 
 .searchicon {
@@ -124,25 +128,6 @@ li a:hover:not(.active) {
     background-color: #4CAF50;
 }
 /*nav middle*/
-
-input[type=text] {
-    width: 130px;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('https://www.w3schools.com/howto/searchicon.png');
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    position: relative;
-    left: 50em;
-    top: .4em;
-}
-
 
 .updates-button {
     height: 3em;
