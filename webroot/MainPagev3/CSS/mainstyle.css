@@ -390,3 +390,154 @@ h2{
 .changePic{
     font-weight: bold;
 }
+
+/*Left-side nav */
+.open{
+    display:block;
+    background-color:rgb(9, 46, 255);
+    width:125px;
+    color:white;
+    border-radius: 25px;
+    border:2px solid black;
+    position:fixed;
+    margin-bottom:1em;
+}
+.il-leftsidebar{
+    height: 75%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(9, 46, 255);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius:10px;
+}
+
+.il-leftsidebar a {
+    margin-top:3em;
+    padding: 8px 2px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color:white;
+    display: block;
+    transition: 0.3s;
+    text-align:left;
+    font-weight:bold;
+}
+
+.il-leftsidebar a:hover {
+    color: #00e0fd;
+}
+
+.il-leftsidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-top:-.06em;
+    margin-bottom:2em;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* .updates-button {
+    height: 3em;
+    width: 3em;
+    background-color: #c2c2c2;
+    border: none;
+    padding: 1em;
+    border-radius: 11em;
+    outline: 0;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    -webkit-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+    -moz-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+    -o-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+    transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+} */
+.profile-avatar__image {
+    width: 7em;
+    height: 7em;
+    position: relative;
+    border-radius: 50px;
+    margin:2em 5.2em;
+}
+
+.profile-avatar__image:hover{
+    cursor: pointer;
+}
+button.accordion {
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    font-weight:bold;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: black;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+/*search*/
+input[type=text] {
+    margin-left:3em;
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('https://www.w3schools.com/howto/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 100%;
+}
+/*Logo*/
+.inspire {
+    color: rgb(0, 170, 255);
+}
+.lab{
+    color:white;
+}
+.logo{
+    width: 100%;
+    height:100%;
+    margin:-2em auto auto 0em;
+}
