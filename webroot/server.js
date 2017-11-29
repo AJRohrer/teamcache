@@ -15,6 +15,15 @@ var nameSchema = new mongoose.Schema({
     // details: [Schema.Types.Mixed]
 },{strict: false});
 
+var projectSchema = new mongoose.Schema({
+    title: {type:String},
+    steps: {type:[String]},
+    media: {
+        video: {type: String},
+        picture: {type: String}
+    }
+})
+
 var User = mongoose.model("Project", nameSchema);
 
 app.use(express.static(__dirname + '/MainPagev3'));
