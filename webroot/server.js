@@ -7,24 +7,39 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
 var mongoose = require("mongoose");
+mongoose.connect("mongodb://localhost:27017/inspirelabdb",{ useMongoClient: true });
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/node-test",{ useMongoClient: true });
-var nameSchema = new mongoose.Schema({
-    proname: {type:String},
-    detailmain: {type:String},
-    // details: [Schema.Types.Mixed]
-},{strict: false});
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error.'));
+var Schema = mongoose.Schema;
+// var nameSchema = new mongoose.Schema({
+//     proname: {type:String},
+//     detailmain: {type:String},
+//     // details: [Schema.Types.Mixed]
+// },{strict: false});
 
-var projectSchema = new mongoose.Schema({
-    title: {type:String},
-    steps: {type:[String]},
+var projectSchema = new Schema({
+    title: String,
+    steps: [{type: String}],
     media: {
         video: {type: String},
         picture: {type: String}
     }
-})
+}, 
+{
+    collection:'projects'
+});
 
-var User = mongoose.model("Project", nameSchema);
+
+var projectModel = new mongoose.model('projects', projectSchema);
+
+db.collection("projects").find({}).toArray(function(err, result) {
+    if(err) throw error;
+    console.log(result);
+    db.close();
+});
+
+//var User = mongoose.model("Project", nameSchema);
 
 app.use(express.static(__dirname + '/MainPagev3'));
 
