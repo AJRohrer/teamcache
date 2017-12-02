@@ -28,11 +28,12 @@ var projectSchema = new Schema({
 
 var projectModel = mongoose.model('projects', projectSchema);
 
-db.collection('projects').find({}).toArray(function(err, result) {
-    if(err) throw error;
-    console.log(result);
-    db.close();
-});
+// db.collection('projects').find({}).toArray(function(err, result) {
+//     if(err) throw error;
+//     console.log(result);
+//     db.close();
+// });
+//had an  error with this block.
 
 
 app.use(express.static(__dirname + '/MainPagev3'));
