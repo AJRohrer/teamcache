@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--landing page for Inspire lab, created on 9-17-17 by Sebastian Kurp -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your Homepage for InspireLab">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mainstyle.css">
+    <script scr="js/mainpage.js"></script>
+    <title>Home-InspireLab</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <section class="il-container topNav">
+            <article class="il-item standardFontandColor">
+                <span class="inspire">Inspire
+                    <span class="lab">Lab</span>
+                </span>
+            </article>
+
+            <!-- class standardFontandColor has to be applied to <a> tag to override bootstrap -->
+            <article class="il-item">
+                <a class="standardFontandColor">My Projects</a>
+            </article>
+
+            <article class="il-item standardFontandColor">
+                <a class="standardFontandColor">Favorite Projects</a>
+            </article>
+
+            <article class="il-item standardFontandColor">
+                <a class="standardFontandColor">Following</a>
+            </article>
+
+            <article class="il-item standardFontandColor">
+                <a class="standardFontandColor">News Feed</a>
+            </article>
+
+            <article class="il-item">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search...">
+                    <div class="input-group-addon">
+                        <span class="searchicon glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="il-item">
+                <!-- add menu here. -->
+                    <div id="mySidenav" class="il-leftsidebar sidenav" >
+                        <div class="toppart">
+                            <div class="logo">
+                                <img class="logo" src="Image\cloud.png" alt="Logo for InspireLab" >
+                            </div>
+                            <img id="profileImg" class="profile-avatar__image" src="Image\profilepic.jpg" onclick="displayFileUpload()">      
+                            <!-- <button class="updates-button"><i class="fa fa-bell"></i></button> May Not have time implement this... -->
+                            <button class="accordion">Username</button>
+                            <div class="panel">
+                              <p>Settings</p>
+                            </div>
+                            <div>
+                                <input type="text" name="search" placeholder="Search..">
+                            </div>
+                        </div>
+                        <a href="javascript:void(0)" class="closey closebtn" onclick="closeNav()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    </div>
+            </article>
+        </section>
+    </nav>
+
+
+    <section class="il-container">
+        <!-- Create blank sidebar to center tiles in center of page-->
+        <article class="il-leftsidebar">
+            This should be whitespace
+        </article>
+        <!-- Create blank sidebar to center tiles in center of page-->
+
+        <!-- Create container for all tiles on the main page.-->
+        <article class="il-maincontent">
+            <section id="activitySpace" class="il-container">
+                <!-- Each tile is contained in a template-->
+                <template id="project_template">
+                    <!-- Each template is a container itself-->
+                    <section class="il-container-projectCard standardColor">
+                        <!-- The project information is in articles-->
+                        <article class="il-item-projectcard">
+                            <!-- This article has its own container inside but is still seen as one article to the parent container-->
+                            <section class="il-item-cardtitle">
+                                <article class="il-item">
+                                    <h2> {{Title}} </h2>
+                                </article>
+
+                                <article class="il-item-heart">
+                                    <span class="glyphicon glyphicon-heart" onclick="toggleFavorite(this)"></span>
+                                </article>
+                            </section>
+                            <!-- This article has its own container inside but is still seen as one article to the parent container-->
+                        </article>
+
+                        <article class="il-item-projectcard ">
+                            <label> {{Step1}} </label>
+                        </article>
+
+                        <article class="il-item-projectcard ">
+                            <label> {{Step2}} </label>
+                        </article>
+
+                        <article class="il-item-projectcard ">
+                            <label> {{Step3}} </label>
+                        </article>
+
+                        <article class="il-item-projectcard ">
+                            <video class="cardMedia" controls>
+                                <source src= {{Video}} type="video/mp4">
+                            </video>
+                        </article>
+
+                        <article class="il-item-projectcard">
+                            <img class="cardMedia" src= {{Picture}}>
+                        </article>
+
+                        <article class="il-item-projectcard">
+                            <section class="il-container">
+                                <article class="il-item">
+                                    <span class="cardLinks">Share</span>
+                                </article>
+
+                                <article class="il-item">
+                                    <span class="cardLinks">Follow</span>
+                                </article>
+                            </section>
+                        </article>
+                        <!-- The project information is in articles-->
+                    </section>
+                    <!-- Each template is a container itself-->
+                </template>
+                <!-- Each tile is contained in a template-->
+            </section>
+        </article>
+        <!-- Create container for all tiles on the main page.-->
+
+        <article class="il-newsfeed">
+
+        </article>
+
+    </section>
+    <div class="file-upload" id="file">
+        <!-- user profile picture -->
+        <span class="changePic">Change Profile Picture</span>
+        <form class="file-form">
+            <input type="file" id="fileName" accept="image/*">
+        </form>
+        <span class="file-close" id="file-close">&#10006</span>
+    </div>
+
+    <script src="JS\mainpage.js"></script>
+</body>
+
+</html>
+
+                        <!-- <strong>id</strong>: <%= user._id %><br> -->

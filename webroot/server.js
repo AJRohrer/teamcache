@@ -6,11 +6,20 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/public'));
 
-var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/inspirelabdb",{ useMongoClient: true });
+var dbConfig = require('./db.js');
+var mongoose = require('mongoose');
+mongoose.connect(dbConfig.url);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error.'));
+
+//log in stuff
+module.exports = require('mongoose');
+module.exports = mongoose.model('User',{
+    username: String,
+password: String,
+email: String
+});
 var Schema = mongoose.Schema;
 
 var projectSchema = new Schema({
