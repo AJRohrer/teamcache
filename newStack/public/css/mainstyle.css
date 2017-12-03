@@ -52,6 +52,7 @@ il- is short for inspirelab. This eliminates the possibility of collision with b
 
 .il-maincontent {
     flex-grow: 1;
+    margin-right: 10px;
 }
 
 .il-newsfeed {
@@ -73,7 +74,10 @@ il- is short for inspirelab. This eliminates the possibility of collision with b
     flex-grow: 1;
     width:100%;
 }
-
+.cardMedia{
+    max-width: 100%;
+    background-color: black;
+}
 .il-textbox {
     background-color: white;
 }
@@ -170,9 +174,9 @@ h2{
     visibility: hidden;
     position: relative;
     display: block;
-    width: 12em;
-    left: 40em;
-    top: -2em;
+    width: 20em;
+    left: 52em;
+    top: -86em;
     opacity: 1;
     z-index: 10;
     background-color: white;
@@ -215,6 +219,7 @@ h2{
     text-align: center;
     margin-left:auto;
     margin-right:auto;
+    cursor: pointer;
 }
 .open{
     display:block;
@@ -293,9 +298,6 @@ h2{
     margin:2em 5.2em;
 }
 
-.profile-avatar__image:hover{
-    cursor: pointer;
-}
 .log{
     margin-bottom:-20% !important;
     text-align: center !important;
@@ -405,4 +407,44 @@ font-size:1em;
 }
 .input{
 font-size:.8em;
+}
+
+@media screen and (max-width: 800px){
+    .standardFontandColor{
+        font-size: .8em;
+        padding: .1em;
+        margin: auto;
+    }
+    .search{
+        width: 25%;
+    }
+    .sidenav{
+        z-index: 1000;
+    }
+    .il-container-projectCard{
+        width: 90%;
+    }
+    .il-maincontent{
+        margin: 0 auto;
+    }
+    input{
+        max-width: 90%;
+        font-size: 20px;
+    }
+    .clickme{
+        font-size: 20px;
+    }
+
+    .modal-content{
+        margin: 1% auto;
+    }
+
+    .file-upload{
+        position: fixed;
+        margin: 7em 2em;
+        top:0;
+        left: 0;
+        z-index: 2000;
+
+    }
 }

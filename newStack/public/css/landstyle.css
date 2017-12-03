@@ -165,3 +165,34 @@ li a {
     background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
     text-decoration: none;
 }
+
+@media screen and (max-width: 800px){
+    .brand{
+        font-size: 25px;
+    }
+    li{
+        margin: 10px 11px 0px 0px;
+    }
+    .btn{
+        font-size:15px;
+    }
+    .center{
+        font-size: 45px;
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    .center-sub{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .btn-signup{
+        display: block;
+        font-size: 25px;
+        margin:0 auto; 
+        width: 50%;
+        text-align: center;
+    }
+    
+}
