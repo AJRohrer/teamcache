@@ -1,7 +1,7 @@
 // config/database.js
 module.exports = {
   
-      'url' : 'mongodb://<dbuser>:<dbpassword>@ds125906.mlab.com:25906/inspirelab'
+      'url' : 'mongodb://admin:admin1@ds125906.mlab.com:25906/inspirelab'
   
   };
   

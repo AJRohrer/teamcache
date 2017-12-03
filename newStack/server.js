@@ -20,10 +20,10 @@ var configDB = require('./config/database.js');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // configuration ===============================================================
-// mongoose.connect(configDB.url,{ useMongoClient: true }); // connect to our database
-mongoose.connect(configDB.url)
-.then(() =>  console.log('connection succesful'))
-.catch((err) => console.error(err));
+mongoose.connect(configDB.url,{ useMongoClient: true }); // connect to our 
+mongoose.Promise = global.Promise;
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 require('./config/passport')(passport); // pass passport for configuration
 
