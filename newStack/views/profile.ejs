@@ -53,23 +53,30 @@
                     </div>
                 </div>
             </article>
-
+            <!-- <article>
+                    <button id="myBtn" class="updates-button">
+                        <i class="fa fa-plus"></i>
+                    </button>
+            </article> -->
             <article class="il-item standardFontandColor">
-                    <span onclick="openNav()" class="standardFontandColor"><%= user.local.firstName %></span>
+                    <span onclick="openNav()" class="username standardFontandColor">User-Settings</span>
             </article>
             <div id="mySidenav" class="il-leftsidebar sidenav" >
                     <div class="toppart">
                         <div class="logo">
                             <img class="logo" src="image\cloud.png" alt="Logo for InspireLab" >
                         </div>
-                        <img id="profileImg" class="profile-avatar__image" src="Image\profilepic.jpg" onclick="displayFileUpload()">
-                        <button class="accordion">Username</button>
-                        <div class="panel">
-                          <p>Settings</p>
+                        <img id="profileImg" class="profile-avatar__image" src="image\profilepic.jpg" >
+                        <div class="userdiv">
+                            <span class="side-user"><%= user.local.firstName %></span>
                         </div>
                     </div>
                     <a href="javascript:void(0)" class="closey closebtn" onclick="closeNav()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-                    <a href="#">Settings</a>
+                    <div class="links">
+                        <a id="add">Create a Project</a>
+                        <a onclick="displayFileUpload()">Change Profile Image</a>
+                        <a class="log" href="/logout">Log Out</a>
+                    </div>
                 </div>
         </section>
     </nav>
@@ -159,10 +166,36 @@
         </form>
         <span class="file-close" id="file-close">&#10006</span>
     </div>
-
-    <script src="JS\mainpage.js"></script>
+    
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4>Create Your Tile</h4>
+                <h5>Enter some important details here later.</h5>
+            </div>
+            <div class="modal-body">
+                <form class="tileCreation" method="post" action="/addproject">
+                    <div>
+                        <label>
+                        Project Name:
+                            <input class="input" type="text" name="proname" placeholder="Project Name" required><br />
+                        </label>
+                    </div>
+                    <div id="dynamicInput">
+                        <label>
+                        Project Detail:
+                            <input class="input" type="text" name="details" placeholder="Details here..." required><br />
+                        </label>
+                    </div>
+                    <input class="clickme" type="button" value="Add another detail" onClick="addInput('dynamicInput');">                
+                    <input class="clickme" type="submit" value="Click here to Create"> 
+                </form>
+            </div>
+        </div> 
+    </div>          
+    <script src="\js\mainpage.js"></script>
+    <script src="\js\addpromodal.js"></script>
 </body>
 
 </html>
-
-                        <!-- <strong>id</strong>: <%= user._id %><br> -->
