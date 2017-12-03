@@ -12,11 +12,6 @@ mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error.'));
 var Schema = mongoose.Schema;
-// var nameSchema = new mongoose.Schema({
-//     proname: {type:String},
-//     detailmain: {type:String},
-//     // details: [Schema.Types.Mixed]
-// },{strict: false});
 
 var projectSchema = new Schema({
     title: String,
@@ -33,12 +28,17 @@ var projectSchema = new Schema({
 
 var projectModel = mongoose.model('projects', projectSchema);
 
-db.collection("projects").find({}).toArray(function(err, result) {
-    if(err) throw error;
-    console.log(result);
-    db.close();
-});
+// db.collection('projects').find({}).toArray(function(err, result) {
+//     if(err) throw error;
+//     console.log(result);
+//     db.close();
+// });
+//had an  error with this block.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f13dc4615da9b39313c7f673a774225cc9d8d707
 app.use(express.static(__dirname + '/MainPagev3'));
 
 app.get("/", (req, res) => {
