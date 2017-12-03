@@ -1,11 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,100);
 body {
-    background: url(http://www.reactiongifs.com/wp-content/uploads/2013/11/I-have-no-idea-what-I-am-doing.gif) no-repeat center center fixed;
+    background-color:lightblue!important;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .login-card {
