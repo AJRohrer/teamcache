@@ -9,9 +9,10 @@
 <body>
   <div class ="login-card">
       <h1><span class="inspire">Inspire</span><span>Lab</span></h1>
+      <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+    <% } %>
       <h2>Register</h2>
-      
-
       <form  action="/signup" method="post">
           <input type="text" name="firstname" placeholder = "First Name"><br><br>
           <input type="text" name="lastname" placeholder = "Last Name"><br /><br>
@@ -24,7 +25,7 @@
 
       <div class="login-help">
           <p>Already have an account?</p>
-          <a href="/profile">Login</a>
+          <a href="/login">Login</a>
       </div>
   </div>
 </body>

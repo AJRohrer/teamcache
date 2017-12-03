@@ -9,6 +9,9 @@
 </head>
 
 <body>
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger"><%= message %></div>
+        <% } %>
     <div class="login-card">
         <h1><span class="inspire">Inspire</span>Lab</h1>
         <h2>Sign-in

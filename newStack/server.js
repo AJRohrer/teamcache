@@ -20,7 +20,10 @@ var configDB = require('./config/database.js');
 app.use(express.static(path.join(__dirname, 'public')));
 
 // configuration ===============================================================
-mongoose.connect(configDB.url,{ useMongoClient: true }); // connect to our database
+// mongoose.connect(configDB.url,{ useMongoClient: true }); // connect to our database
+mongoose.connect(configDB.url)
+.then(() =>  console.log('connection succesful'))
+.catch((err) => console.error(err));
 
 require('./config/passport')(passport); // pass passport for configuration
 
@@ -32,7 +35,7 @@ app.use(bodyParser()); // get information from html forms
 app.set('view engine', 'ejs'); // set up ejs for templating
 
 // required for passport
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(session({ secret: 'teamcache' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
