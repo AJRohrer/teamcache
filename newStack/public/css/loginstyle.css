@@ -62,7 +62,7 @@ input[type=password]:hover {
 
 .login {
     text-align: center;
-    font-size: 14px;
+    font-size: 1em;
     font-family: 'Arial', sans-serif;
     font-weight: 700;
     height: 36px;
@@ -106,7 +106,7 @@ input[type=password]:hover {
 .login-help {
     width: 100%;
     text-align: center;
-    font-size: 12px;
+    font-size: 1em;
 }
 
 .inspire {
@@ -115,5 +115,11 @@ input[type=password]:hover {
 
 .login-card h1 {
     text-align: center;
-    font-size: 65px;
+    font-size: 5em;
+}
+/*alert stuff*/
+.alert{
+    text-align: center;
+    color:red;
+    font-size: 2em;
 }

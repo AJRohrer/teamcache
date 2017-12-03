@@ -9,17 +9,17 @@
 </head>
 
 <body>
-        <% if (message.length > 0) { %>
-            <div class="alert alert-danger"><%= message %></div>
-        <% } %>
     <div class="login-card">
         <h1><span class="inspire">Inspire</span>Lab</h1>
+        <% if (message.length > 0) { %>
+            <div class="alert"><%= message %></div>
+        <% } %>
         <h2>Sign-in
         </h2><br>
 
         <form action="/login" method="post">
-            <input type="text" name="user" placeholder="Username">
-            <input type="password" name="pass" placeholder="Password">
+            <input type="text" name="email" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
             <input type="submit"  class="login login-submit" value="Login">
         </form>
 
