@@ -1,3 +1,11 @@
+body {
+    background-color:lightblue!important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif !important;
+}
 /*Flexbox css
 il- is short for inspirelab. This eliminates the possibility of collision with bootstrap classes.
 */
@@ -110,7 +118,7 @@ article a:hover {
 
 
 .topNav {
-    background-color: rgb(9, 46, 255);
+    background-color: rgba(48, 81, 250, 0.877);
 }
 
 /*Logo*/
@@ -125,29 +133,12 @@ article a:hover {
 /*nav-bar*/
 
 li a:hover:not(.active) {
-    background-color: rgb(20, 66, 100)
+    background-color: #3B65CE
 }
 
 .active {
     background-color: #4CAF50;
 }
-/*nav middle*/
-
-.updates-button {
-    height: 1em;
-    width: 1em;
-    background-color: #c2c2c2;
-    border: none;
-    border-radius: 11em;
-    outline: 0;
-    position: relative;
-    cursor: pointer;
-    -webkit-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
-    -moz-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
-    -o-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
-    transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
-}
-
 
 /*NewsFeed*/
 .favorite{
@@ -223,7 +214,7 @@ h2{
 }
 .open{
     display:block;
-    background-color:rgb(9, 46, 255);
+    background-color:rgba(48, 81, 250, 1);
     width:125px;
     color:white;
     border-radius: 25px;
@@ -238,7 +229,7 @@ h2{
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: rgb(9, 46, 255);
+    background-color: rgba(48, 81, 250,1);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
