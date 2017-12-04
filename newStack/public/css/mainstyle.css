@@ -399,15 +399,26 @@ font-size:1em;
 .input{
 font-size:.8em;
 }
+.gear{
+    visibility: hidden;
+}
+.mobile-only{
+    display: none;
+}
+
+
 
 @media screen and (max-width: 800px){
     .standardFontandColor{
         font-size: .8em;
-        padding: .1em;
+        padding-left: 1px;
         margin: auto;
+        text-align: center;
     }
     .search{
         width: 25%;
+        margin: auto;
+        padding-right: -1em;
     }
     
     .sidenav{
@@ -419,10 +430,7 @@ font-size:.8em;
     .il-maincontent{
         margin: 0 auto;
     }
-    input{
-        max-width: 90%;
-        font-size: 20px;
-    }
+    
     .clickme{
         font-size: 20px;
     }
@@ -437,6 +445,41 @@ font-size:.8em;
         top:0;
         left: 0;
         z-index: 2000;
+    }
 
+    .username{
+        visibility: hidden;
+    }
+
+    .gear{
+        position: absolute;
+        cursor: pointer;
+        color: white;
+        visibility: visible;
+        margin: 0 auto;
+        right: .25em;
+        font-size: 2.5em;
+    }
+
+    .mobile-only{
+        display: block;
+    }
+
+    .mobile-only .input-group{
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .desktop{
+        visibility: hidden;
+    }
+
+    .logo-mobile{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .logo-title{
+        font-size: 20px;
+        font-weight: bolder;
     }
 }
