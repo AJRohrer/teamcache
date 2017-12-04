@@ -22,30 +22,36 @@
 <body>
     <nav>
         <section class="il-container topNav">
-            <article class="il-item standardFontandColor">
-                <span class="inspire">Inspire
+            <article class="il-item standardFontandColor desktop">
+                <span class="inspire">Inspire 
                     <span class="lab">Lab</span>
                 </span>
             </article>
 
+            <article class="il-item standardFontandColor mobile-only logo-mobile">
+                    <span class="inspire logo-title">Inspire 
+                            <span class="lab">Lab</span>
+                        </span>
+            </article>
+
             <!-- class standardFontandColor has to be applied to <a> tag to override bootstrap -->
-            <article class="il-item standardFontandColor">
+            <article class="il-item standardFontandColor desktop">
                 <a class="standardFontandColor">My Projects</a>
             </article>
 
-            <article class="il-item standardFontandColor">
+            <article class="il-item standardFontandColor desktop">
                 <a class="standardFontandColor">Favorite Projects</a>
             </article>
 
-            <article class="il-item standardFontandColor">
+            <article class="il-item standardFontandColor desktop">
                 <a class="standardFontandColor">Following</a>
             </article>
 
-            <article class="il-item standardFontandColor">
+            <article class="il-item standardFontandColor desktop">
                 <a class="standardFontandColor">News Feed</a>
             </article>
 
-            <article class="il-item search">
+            <article class="il-item search desktop">
                 <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search...">
                     <div class="input-group-addon">
@@ -53,8 +59,12 @@
                     </div>
                 </div>
             </article>
+            
             <article class="il-item standardFontandColor">
                     <span onclick="openNav()" class="username standardFontandColor">User-Settings</span>
+            </article>
+            <article>
+                <span onclick="openNav()" class="fa fa-bars gear"></span>
             </article>
             <!--sidenav bar things -->
             <div id="mySidenav" class="il-leftsidebar sidenav" >
@@ -69,6 +79,19 @@
                     </div>
                     <a href="javascript:void(0)" class="closey closebtn" onclick="closeNav()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                     <div class="links">
+                        <div class="mobile-only">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Search...">
+                                <div class="input-group-addon">
+                                    <span class="searchicon glyphicon glyphicon-search"></span>
+                                </div>
+                            </div>
+                            <a>My Projects</a>
+                            <a>Favorite Projects</a>
+                            <a>Following</a>
+                            <a>News Feed</a>
+                        </div>
+                        
                         <a id="add">+Create a Project</a>
                         <a onclick="displayFileUpload()">Change Profile Image</a>
                         <a class="log" href="/logout">Log Out</a>
