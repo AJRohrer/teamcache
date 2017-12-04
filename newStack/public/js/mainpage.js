@@ -1,3 +1,16 @@
+
+$(document).ready(function() {
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:8000/getallprojects',
+        contentType: 'application/json',
+        success: function(projects){
+            console.log(JSON.stringify(projects));
+        }
+    })
+});
+
+
 function toggleFavorite(myelement){
     if (myelement.style.color != "red"){
         myelement.style.color = "red";

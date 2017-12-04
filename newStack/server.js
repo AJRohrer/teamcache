@@ -5,7 +5,7 @@
 var path = require('path');
 var express  = require('express');
 var app      = express();
-var port     = process.env.PORT || 8080;
+var port     = process.env.PORT || 8000;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
@@ -47,3 +47,25 @@ require('./app/routes.js')(app, passport); // load our routes and pass in our ap
 // launch ======================================================================
 app.listen(port);
 console.log('The magic happens on port ' + port);
+
+var projectSchema = mongoose.Schema({
+    title: String,
+    steps: [{type: String}],
+    media: {
+        video: {type: String},
+        picture: {type: String}
+    }
+}, 
+{
+    collection:'projects'
+});
+
+app.post('/getallprojects', function(req, res) {
+    var projectModel = mongoose.model('projects', projectSchema);
+    
+    projectModel.find().exec().then(function(projectObj){
+        console.log(projectObj);
+        res.send(projectObj);
+    });
+});
+
