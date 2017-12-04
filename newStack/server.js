@@ -10,6 +10,8 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
 
+//Database config with local enviroment path for safety...
+// var url =process.env.MONGOLAB_URI;
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
@@ -19,6 +21,7 @@ var expressValidator = require('express-validator');
 var configDB = require('./config/database.js');
 
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/favicon.ico', express.static('image/favicon.ico'));
 
 // configuration ===============================================================
 mongoose.connect(configDB.url,{ useMongoClient: true }); // connect to our 
