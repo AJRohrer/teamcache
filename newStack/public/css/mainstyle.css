@@ -88,7 +88,7 @@ il- is short for inspirelab. This eliminates the possibility of collision with b
     width:100%;
 }
 .cardMedia{
-    max-width: 100%;
+    max-width: 300px;
     background-color: black;
 }
 .il-textbox {
