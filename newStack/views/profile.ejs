@@ -119,8 +119,8 @@
                         <article class="il-item-projectcard">
                             <!-- This article has its own container inside but is still seen as one article to the parent container-->
                             <section class="il-item-cardtitle">
-                                <article class="il-item">
-                                    <h2> {{Title}} </h2>
+                                <article class="il-title">
+                                    <h2> {{title}} </h2>
                                 </article>
 
                                 <article class="il-item-heart">
@@ -131,25 +131,25 @@
                         </article>
 
                         <article class="il-item-projectcard ">
-                            <label> {{Step1}} </label>
+                            <label> {{steps[0]}} </label>
                         </article>
 
                         <article class="il-item-projectcard ">
-                            <label> {{Step2}} </label>
+                            <label> {{steps[1]}} </label>
                         </article>
 
                         <article class="il-item-projectcard ">
-                            <label> {{Step3}} </label>
+                            <label> {{steps[2]}} </label>
                         </article>
 
                         <article class="il-item-projectcard ">
                             <video class="cardMedia" controls >
-                                <source src= {{Video}} type="video/mp4">
+                                <source src= {{media.video}} type="video/mp4">
                             </video>
                         </article>
 
                         <article class="il-item-projectcard">
-                            <img class="cardMedia" src= {{Picture}}>
+                            <img class="cardMedia" src= {{media.picture}}>
                         </article>
 
                         <article class="il-item-projectcard">

@@ -19,6 +19,11 @@ il- is short for inspirelab. This eliminates the possibility of collision with b
     width: 8%;
 }
 
+.il-title{
+    flex-grow: 1;
+    width: 80%;
+}
+
 .il-item-heart{
     flex-grow: 1;
     width:"8%";
