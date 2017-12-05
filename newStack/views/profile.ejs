@@ -79,6 +79,7 @@
                     </div>
                     <a href="javascript:void(0)" class="closey closebtn" onclick="closeNav()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
                     <div class="links">
+                        
                         <div class="mobile-only">
                             <div class="input-group">
                                 <input class="form-control" type="text" placeholder="Search...">
@@ -94,6 +95,14 @@
                         
                         <a id="add">+Create a Project</a>
                         <a onclick="displayFileUpload()">Change Profile Image</a>
+                        <div class="file-upload" id="file">
+                            <!-- user profile picture -->
+                            <span class="changePic">Change Profile Picture</span>
+                            <form class="file-form">
+                                <input type="file" id="fileName" accept="image/*">
+                            </form>
+                            <span class="file-close" id="file-close">&#10006</span>
+                        </div>
                         <a class="log" href="/logout">Log Out</a>
                     </div>
                 </div>
@@ -173,14 +182,7 @@
         <!-- Create container for all tiles on the main page.-->
     </section>
     <!--Update user profile -->
-    <div class="file-upload" id="file">
-        <!-- user profile picture -->
-        <span class="changePic">Change Profile Picture</span>
-        <form class="file-form">
-            <input type="file" id="fileName" accept="image/*">
-        </form>
-        <span class="file-close" id="file-close">&#10006</span>
-    </div>
+    
     <!--modal for creating projects -->
     <div id="myModal" class="modal">
         <div class="modal-content">

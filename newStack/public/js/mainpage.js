@@ -36,7 +36,7 @@ function toggleFavorite(myelement) {
 
 
 function displayFileUpload() {
-    document.getElementById("file").setAttribute("style", "visibility: visible");
+    document.getElementById("file").setAttribute("style", "display: inline-block");
 }
 
 var fileClose = document.getElementById("file-close");
