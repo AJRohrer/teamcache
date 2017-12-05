@@ -30,6 +30,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 require('./config/passport')(passport); // pass passport for configuration
+var projmodel = require('./app/models/projects');       // include for model of projects
 
 // set up our express application
 app.use(morgan('dev')); // log every request to the console
@@ -45,30 +46,9 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
-require('./app/routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+require('./app/routes.js')(app, passport, projmodel); // load our routes and pass in our app and fully configured passport
 
 // launch ======================================================================
 app.listen(port);
 console.log('The magic happens on port ' + port);
-
-var projectSchema = mongoose.Schema({
-    title: String,
-    steps: [{type: String}],
-    media: {
-        video: {type: String},
-        picture: {type: String}
-    }
-}, 
-{
-    collection:'projects'
-});
-
-app.post('/getallprojects', function(req, res) {
-    var projectModel = mongoose.model('projects', projectSchema);
-    
-    projectModel.find().exec().then(function(projectObj){
-        console.log(projectObj);
-        res.send(projectObj);
-    });
-});
 

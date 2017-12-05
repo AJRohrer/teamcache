@@ -1,4 +1,4 @@
-module.exports = function(app, passport) {
+module.exports = function(app, passport, projectModel) {
   
       // =====================================
       // HOME PAGE (with login links) ========
@@ -60,6 +60,16 @@ module.exports = function(app, passport) {
           req.logout();
           res.redirect('/');
       });
+
+      // =====================================
+      // GET PROJECTS ========================
+      // =====================================
+      app.post('/getallprojects', function(req, res) {        
+        projectModel.find().exec().then(function(projectObj){
+            console.log(projectObj);
+            res.send(projectObj);
+        });
+    });
   };
   
   // route middleware to make sure a user is logged in
