@@ -48,9 +48,19 @@ module.exports = function(app, passport, projectModel) {
       // we will want this protected so you have to be logged in to visit
       // we will use route middleware to verify this (the isLoggedIn function)
       app.get('/profile', isLoggedIn, function(req, res) {
-          res.render('profile.ejs', {
-              user : req.user // get the user out of session and pass to template
-          });
+        var returnobj = {};
+        returnobj.projects = {};
+        projectModel.find().exec().then(function(projectObj){
+            returnobj.projects = projectObj;
+            console.log("I got this: " + returnobj.projects.length);
+            console.log("Now it is this: " + returnobj.projects[0].steps[0]);
+            returnobj.user = req.user;
+            console.log("Test 1: " + returnobj.projects[0].title);
+            console.log("Test 2: " + returnobj.user.local.firstName);
+              res.render('profile.ejs', {
+                  returnobject : returnobj // get the user out of session and pass to template
+              });
+        })
       });
   
       // =====================================
@@ -66,7 +76,6 @@ module.exports = function(app, passport, projectModel) {
       // =====================================
       app.post('/getallprojects', function(req, res) {        
         projectModel.find().exec().then(function(projectObj){
-            console.log(projectObj);
             res.send(projectObj);
         });
     });

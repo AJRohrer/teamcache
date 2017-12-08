@@ -9,13 +9,14 @@
     <meta name="description" content="Your Homepage for InspireLab">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/mainstyle.css">
-    <script scr="js/mainpage.js"></script>
+    
     <title>Home-InspireLab</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="js/mainpage.js"></script>
 
 </head>
 
@@ -74,7 +75,7 @@
                         </div>
                         <img id="profileImg" class="profile-avatar__image" src="image\profilepic.jpg" >
                         <div class="userdiv">
-                            <span class="side-user"><%= user.local.firstName %></span>
+                            <span class="side-user"><%= returnobject.user.local.firstName %></span>
                         </div>
                     </div>
                     <a href="javascript:void(0)" class="closey closebtn" onclick="closeNav()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
@@ -120,8 +121,8 @@
         <!-- Create container for all tiles on the main page.-->
         <article class="il-maincontent">
             <section id="activitySpace" class="il-container">
-                <!-- Each tile is contained in a template-->
-                <template id="project_template">
+                
+                <% for(int i=0; i<returnobject.projects.length; i++) { %>
                     <!-- Each template is a container itself-->
                     <section class="il-container-projectCard standardColor">
                         <!-- The project information is in articles-->
@@ -129,7 +130,7 @@
                             <!-- This article has its own container inside but is still seen as one article to the parent container-->
                             <section class="il-item-cardtitle">
                                 <article class="il-title">
-                                    <h2> {{title}} </h2>
+                                    <h2><%= returnobject.projects[i].title %></h2>
                                 </article>
 
                                 <article class="il-item-heart">
@@ -138,27 +139,20 @@
                             </section>
                             <!-- This article has its own container inside but is still seen as one article to the parent container-->
                         </article>
-
+                        <% for (int j=0; j < returnobject.projects[i].steps.length; j++) { %>
                         <article class="il-item-projectcard ">
-                            <label> <%= projects[0].steps[0] %> </label>
+                            <label> <%= returnobject.projects[i].steps[j] %> </label>
                         </article>
-
-                        <article class="il-item-projectcard ">
-                            <label> Set a viewing angle </label>
-                        </article>
-
-                        <article class="il-item-projectcard ">
-                            <label> Look through the lense </label>
-                        </article>
+                        <% } %>
 
                         <article class="il-item-projectcard ">
                             <video class="cardMedia" controls >
-                                <source src= {{media.video}} type="video/mp4">
+                                <source src= <%= returnobject.projects[i].media.video %> type="video/mp4">
                             </video>
                         </article>
 
                         <article class="il-item-projectcard">
-                            <img class="cardMedia" src= {{media.picture}}>
+                            <img class="cardMedia" src= <%= returnobject.projects[i].media.picture %> >
                         </article>
 
                         <article class="il-item-projectcard">
@@ -174,8 +168,7 @@
                         </article>
                         <!-- The project information is in articles-->
                     </section>
-                    <!-- Each template is a container itself-->
-                </template>
+                    <% } %>
                 <!-- Each tile is contained in a template-->
             </section>
         </article>

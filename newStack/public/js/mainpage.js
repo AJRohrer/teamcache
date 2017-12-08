@@ -1,28 +1,3 @@
-
-var projects = {};
-$(document).ready(function () {
-    $.ajax({
-        type: 'POST',
-        url: 'http://localhost:8000/getallprojects',
-        contentType: 'application/json',
-        success: function (projects) {
-            console.log(JSON.stringify(projects));
-
-            const template = $('#project_template').html()
-            const container = $('#activitySpace');
-
-            for (let i = 0; i < projects.length; i++) {
-                // for (let j = 0; j < projects.steps.length; j++){
-                //     console.log(projects[i].steps[j]);
-                // }
-                container.append(Mustache.render(template, projects[i]))
-            }
-
-
-        }
-    })
-});
-
 function toggleFavorite(myelement) {
     if (myelement.style.color != "red") {
         myelement.style.color = "red";
