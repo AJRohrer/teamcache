@@ -59,20 +59,6 @@ document.getElementById("fileName").onchange = function (evt) {
     }
 }
 
-//Get project data from a json format. This will eventually call the database that will return
-//json data.
-function getProjects() {
-    var $deferredNotesRequest = $.getJSON("../data/testprojects.json", { format: "json" });
-}
-
-//when getProjects request is done render each of the project tiles.
-$.when(getProjects()).done(function (response) {
-    var $projects = response.projectProperties //projectProperties is the name in the json file.
-    $projects.forEach(function (item) {
-        createProject(item.project);
-    });
-});
-
 /*Nav-Bar*/
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
