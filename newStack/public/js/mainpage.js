@@ -1,4 +1,5 @@
 
+var projects = {};
 $(document).ready(function () {
     $.ajax({
         type: 'POST',
@@ -6,41 +7,21 @@ $(document).ready(function () {
         contentType: 'application/json',
         success: function (projects) {
             console.log(JSON.stringify(projects));
-            var html = '';
-            
-            for(var i = 0; i < projects.length; i++){
-                html += '<section class="il-container-projectCard standardColor"><article class="il-item-projectcard"><section class="il-item-cardtitle"><article class="il-title">';
-                html += '<h2>' + projects[i].title + '</h2>';
-                html += '</article>';
-                html += '<article class="il-item-heart"><span class="glyphicon glyphicon-heart" onclick="toggleFavorite(this)"></span></article></section></article>';
-                
-                for(var j = 0; j < projects[i].steps.length; j++){
-                    html += '<article class="il-item-projectcard ">';
-                    html += '<label>' + projects[i].steps[j] + '</label>';
-                    html += '</article>';
-                }
 
-                html += '<article class="il-item-projectcard "><video class="cardMedia" controls >';
-                html += '<source src=' + projects[i].media.video + 'type="video/mp4">';
-                html += '</video></article>';
+            const template = $('#project_template').html()
+            const container = $('#activitySpace');
 
-                html += '<article class="il-item-projectcard">';
-                html += '<img class="cardMedia" src=' + projects[i].media.picture + '>';
-                html += '</article>'
-
-                html += '<article class="il-item-projectcard"><section class="il-container"><article class="il-item"><span class="cardLinks">Share</span></article><article class="il-item"><span class="cardLinks">Follow</span></article></section></article></section>';
-
-                
+            for (let i = 0; i < projects.length; i++) {
+                // for (let j = 0; j < projects.steps.length; j++){
+                //     console.log(projects[i].steps[j]);
+                // }
+                container.append(Mustache.render(template, projects[i]))
             }
-            document.getElementById("projectcards").innerHTML(html);
+
+
         }
     })
 });
-
-function populateCards(jsonCards){
-    var html = '';
-    return html;
-}
 
 function toggleFavorite(myelement) {
     if (myelement.style.color != "red") {
@@ -52,6 +33,7 @@ function toggleFavorite(myelement) {
         //remove item from user favorites here once connected to db.
     }
 }
+
 
 function displayFileUpload() {
     document.getElementById("file").setAttribute("style", "display: inline-block");
@@ -76,6 +58,20 @@ document.getElementById("fileName").onchange = function (evt) {
         alert("File not supported");
     }
 }
+
+//Get project data from a json format. This will eventually call the database that will return
+//json data.
+function getProjects() {
+    var $deferredNotesRequest = $.getJSON("../data/testprojects.json", { format: "json" });
+}
+
+//when getProjects request is done render each of the project tiles.
+$.when(getProjects()).done(function (response) {
+    var $projects = response.projectProperties //projectProperties is the name in the json file.
+    $projects.forEach(function (item) {
+        createProject(item.project);
+    });
+});
 
 /*Nav-Bar*/
 

@@ -9,14 +9,13 @@
     <meta name="description" content="Your Homepage for InspireLab">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/mainstyle.css">
-    
+    <script scr="js/mainpage.js"></script>
     <title>Home-InspireLab</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
-    <script src="js/mainpage.js"></script>
 
 </head>
 
@@ -123,9 +122,58 @@
             <section id="activitySpace" class="il-container">
                 <!-- Each tile is contained in a template-->
                 <template id="project_template">
-                    
-                    <div id="projectcards"></div>
-                    
+                    <!-- Each template is a container itself-->
+                    <section class="il-container-projectCard standardColor">
+                        <!-- The project information is in articles-->
+                        <article class="il-item-projectcard">
+                            <!-- This article has its own container inside but is still seen as one article to the parent container-->
+                            <section class="il-item-cardtitle">
+                                <article class="il-title">
+                                    <h2> {{title}} </h2>
+                                </article>
+
+                                <article class="il-item-heart">
+                                    <span class="glyphicon glyphicon-heart" onclick="toggleFavorite(this)"></span>
+                                </article>
+                            </section>
+                            <!-- This article has its own container inside but is still seen as one article to the parent container-->
+                        </article>
+
+                        <article class="il-item-projectcard ">
+                            <label> <%= projects[0].steps[0] %> </label>
+                        </article>
+
+                        <article class="il-item-projectcard ">
+                            <label> Set a viewing angle </label>
+                        </article>
+
+                        <article class="il-item-projectcard ">
+                            <label> Look through the lense </label>
+                        </article>
+
+                        <article class="il-item-projectcard ">
+                            <video class="cardMedia" controls >
+                                <source src= {{media.video}} type="video/mp4">
+                            </video>
+                        </article>
+
+                        <article class="il-item-projectcard">
+                            <img class="cardMedia" src= {{media.picture}}>
+                        </article>
+
+                        <article class="il-item-projectcard">
+                            <section class="il-container">
+                                <article class="il-item">
+                                    <span class="cardLinks">Share</span>
+                                </article>
+
+                                <article class="il-item">
+                                    <span class="cardLinks">Follow</span>
+                                </article>
+                            </section>
+                        </article>
+                        <!-- The project information is in articles-->
+                    </section>
                     <!-- Each template is a container itself-->
                 </template>
                 <!-- Each tile is contained in a template-->
