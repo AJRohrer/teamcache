@@ -71,14 +71,9 @@ module.exports = function(app, passport, projectModel) {
           res.redirect('/');
       });
 
-      // =====================================
-      // GET PROJECTS ========================
-      // =====================================
-      app.post('/getallprojects', function(req, res) {        
-        projectModel.find().exec().then(function(projectObj){
-            res.send(projectObj);
-        });
-    });
+      app.post('/addproject', function(req, res) {
+            console.log(req);
+      });
   };
   
   // route middleware to make sure a user is logged in

@@ -122,7 +122,7 @@
         <article class="il-maincontent">
             <section id="activitySpace" class="il-container">
                 
-                <% for(int i=0; i<returnobject.projects.length; i++) { %>
+                <% for(i=0; i<returnobject.projects.length; i++) { %>
                     <!-- Each template is a container itself-->
                     <section class="il-container-projectCard standardColor">
                         <!-- The project information is in articles-->
@@ -139,10 +139,10 @@
                             </section>
                             <!-- This article has its own container inside but is still seen as one article to the parent container-->
                         </article>
-                        <% for (int j=0; j < returnobject.projects[i].steps.length; j++) { %>
-                        <article class="il-item-projectcard ">
-                            <label> <%= returnobject.projects[i].steps[j] %> </label>
-                        </article>
+                        <% for (j=0; j < returnobject.projects[i].steps.length; j++) { %>
+                            <article class="il-item-projectcard ">
+                                <label> <%= returnobject.projects[i].steps[j] %> </label>
+                            </article>
                         <% } %>
 
                         <article class="il-item-projectcard ">
