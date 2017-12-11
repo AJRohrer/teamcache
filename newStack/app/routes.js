@@ -74,28 +74,28 @@ module.exports = function (app, passport, projectModel, db) {
     app.post('/addproject', function (req, res) {
         var projsteps = [];
         if (req.body.detail1) {
-            steps.push(req.body.detail1);
-            console.log("detail 1:" + steps[0]);
+            projsteps.push(req.body.detail1);
+            console.log("detail 1:" + projsteps[0]);
         }
         if (req.body.detail2) {
-            steps.push(req.body.detail1);
-            console.log("detail 2:" + steps[1]);
+            projsteps.push(req.body.detail1);
+            console.log("detail 2:" + projsteps[1]);
         }
         if (req.body.detail3) {
-            steps.push(req.body.detail1);
-            console.log("detail 3:" + steps[2]);
+            projsteps.push(req.body.detail1);
+            console.log("detail 3:" + projsteps[2]);
         }
         if (req.body.detail4) {
-            steps.push(req.body.detail1);
-            console.log("detail 4:" + steps[3]);
+            projsteps.push(req.body.detail1);
+            console.log("detail 4:" + projsteps[3]);
         }
         if (req.body.detail5) {
-            steps.push(req.body.detail1);
-            console.log("detail 5:" + steps[4]);
+            projsteps.push(req.body.detail1);
+            console.log("detail 5:" + projsteps[4]);
         }
         if (req.body.detail6) {
-            steps.push(req.body.detail1);
-            console.log("detail 6:" + steps[5]);
+            projsteps.push(req.body.detail1);
+            console.log("detail 6:" + projsteps[5]);
         }
 
         var project = new projectModel({
