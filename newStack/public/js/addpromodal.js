@@ -32,7 +32,7 @@ var modal = document.getElementById('myModal');
          }
          else {
               var newdiv = document.createElement('div');
-              newdiv.innerHTML = "Project Detail " + (counter + 1) +": "+ " <input class='input' type='text' name='detail' placeholder='Details here...'>";
+              newdiv.innerHTML = "Project Detail " + (counter + 1) +": "+ " <input class='input' type='text' name='detail" + (counter + 1) + "' placeholder='Details here...'>";
               document.getElementById(divName).appendChild(newdiv);
               counter++;
          }
