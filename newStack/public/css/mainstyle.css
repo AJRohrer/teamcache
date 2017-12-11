@@ -1,0 +1,481 @@
+body {
+    background-color:lightblue!important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif !important;
+}
+/*Flexbox css
+il- is short for inspirelab. This eliminates the possibility of collision with bootstrap classes.
+*/
+.il-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.il-item{
+    flex-grow: 1;
+    width: 8%;
+}
+
+.il-title{
+    flex-grow: 1;
+    width: 80%;
+}
+
+.il-item-heart{
+    flex-grow: 1;
+    width:"8%";
+    font-size: 24px;
+    text-align: right;
+    margin-right: 10px;
+    color:white;
+}
+
+.il-item-heart:hover {
+    color: lightgray;
+}
+
+.il-item-heart:checked{
+    color: red;
+}
+
+.il-item-fullwidth{
+    flex-grow: 1;
+    width:100%;
+}
+
+.il-item-cardtitle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.il-item:hover {
+    cursor: pointer;
+}
+
+.il-leftsidebar{
+    /*First: don't grow, second: don't shrink, third, start at 230px*/
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 230px;
+}
+
+.il-maincontent {
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.il-newsfeed {
+    flex: 0 0 25%;
+}
+
+.il-container-projectCard {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #0066ff;
+    border-color: white;
+    border-radius: 15px 15px 15px 15px;
+    padding: 20px;
+    margin: 15px;
+}
+
+.il-item-projectcard {
+    flex-grow: 1;
+    width:100%;
+}
+.cardMedia{
+    max-width: 300px;
+    background-color: black;
+}
+.il-textbox {
+    background-color: white;
+}
+
+/*Flexbox css*/
+
+.searchicon {
+    color: blue;
+    font-size: 15px;
+}
+
+.standardFontandColor {
+    font-family: 'Trebuchet MS';
+    color: white;
+    font-size: 28px;
+}
+
+article a:hover {
+    color:lightblue;
+    text-decoration: none;
+}
+
+.standardFont {
+    font-family: 'Trebuchet MS';
+}
+
+.standardColor {
+    color: white;
+}
+
+
+.topNav {
+    background-color: rgba(48, 81, 250, 0.877);
+}
+
+/*Logo*/
+
+.inspire {
+    color: rgb(0, 170, 255);
+}
+
+.lab {
+    color: black;
+}
+/*nav-bar*/
+
+li a:hover:not(.active) {
+    background-color: #3B65CE
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/*NewsFeed*/
+.favorite{
+    float: right;
+    margin: 0;           
+    font-size: 35px;
+    text-shadow: 1px 1px black;
+    color:white;
+}
+
+.favorite:hover{
+    cursor: pointer;
+    text-shadow: 2px 2px black;
+    user-select: none;
+}
+
+h2{
+    display: inline-block;
+}
+
+
+
+.file-upload{
+    display: none;
+    position: relative;
+    width: 20em;
+    max-width: 98%;
+    margin: -3em auto;
+    opacity: 1;
+    z-index: 9999;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 10px 18px 10px;
+    border: 3px solid black;
+    box-shadow: 0px 5px 40px black;            
+}
+
+
+.file-close{
+    cursor: pointer;
+    position: absolute;
+    top:0; 
+    right: .3em;
+}
+
+.file-form{
+    display: inline;
+    text-align: center;
+}
+
+.changePic{
+    font-weight: bold;
+}
+.username{
+    margin-left:.7em;
+}
+/*Left-side nav */
+.side-user{
+    color:white;
+    text-align: center;
+    font-size: 2em;
+}
+.userdiv{
+    text-align: center;
+    margin:1em auto;
+}
+.links{
+    text-align: center;
+    margin-left:auto;
+    margin-right:auto;
+    cursor: pointer;
+}
+.open{
+    display:block;
+    background-color:rgba(48, 81, 250, 1);
+    width:125px;
+    color:white;
+    border-radius: 25px;
+    border:2px solid black;
+    position:fixed;
+    margin-bottom:1em;
+}
+.il-leftsidebar{
+    height: 75%;
+    width: 0;
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    right: 0;
+    background-color: rgba(48, 81, 250,1);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-radius:10px;
+}
+
+.il-leftsidebar a {
+    margin-top:3em;
+    text-decoration: none !important;
+    font-size: 25px;
+    color:white;
+    display: block;
+    transition: 0.3s;
+    text-align:center;
+    font-weight:bold;
+}
+
+.il-leftsidebar a:hover {
+    color: #00e0fd;
+}
+
+.il-leftsidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    margin-top:-.06em;
+    margin-bottom:2em;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/* .updates-button {
+    height: 3em;
+    width: 3em;
+    background-color: #c2c2c2;
+    border: none;
+    padding: 1em;
+    border-radius: 11em;
+    outline: 0;
+    position: relative;
+    cursor: pointer;
+    float: right;
+    -webkit-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+    -moz-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+    -o-transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+    transition: background-color .2s cubic-bezier(.694, .0482, .335, 1), width .2s cubic-bezier(.694, .0482, .335, 1);
+} */
+.profile-avatar__image {
+    width: 7em;
+    height: 7em;
+    position: relative;
+    border-radius: 50px;
+    margin:2em 5.2em;
+}
+
+.log{
+    margin-bottom:-20% !important;
+    text-align: center !important;
+    color:red !important;
+    font-size:2em !important;
+    background-color: white;
+    margin-right:auto !important;
+    margin-left:auto !important;
+}
+/*Logo*/
+.inspire {
+    color: rgb(0, 170, 255);
+}
+.lab{
+    color:white;
+}
+.logo{
+    width: 100%;
+    height:100%;
+    margin:-2em auto auto 0em;
+}
+ /* Modal Content/Box */
+ .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Modal Header */
+.modal-header {
+    padding: 16px;
+    background-color: #0066ff;
+    color: white;
+    text-align: center;
+}
+
+/* Modal Body */
+.modal-body {padding: 2px 16px;}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #0066ff;
+    color: white;
+    text-align: center;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: 10em auto ;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+.clickme{
+border: 0px;
+color: #fff;
+text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+background-color: #4d90fe;
+}
+.tileCreation{
+text-align: center;
+font-size:2em;
+}
+.title{
+font-size: 5em;
+}
+h4{
+font-size:3em;
+}
+h5{
+font-size:1em;
+}
+.input{
+font-size:.8em;
+}
+.gear{
+    visibility: hidden;
+}
+.mobile-only{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 800px){
+    .standardFontandColor{
+        font-size: .8em;
+        padding-left: 1px;
+        margin: auto;
+        text-align: center;
+    }
+    .search{
+        width: 25%;
+        margin: auto;
+        padding-right: -1em;
+    }
+    
+    .sidenav{
+        z-index: 1000;
+    }
+        
+    .clickme{
+        font-size: 20px;
+    }
+
+    .modal-content{
+        margin: 1% auto;
+    }
+
+    
+
+    .username{
+        visibility: hidden;
+    }
+
+    .gear{
+        position: absolute;
+        cursor: pointer;
+        color: white;
+        visibility: visible;
+        margin: 0 auto;
+        right: .25em;
+        font-size: 2.5em;
+    }
+
+    .mobile-only{
+        display: block;
+    }
+
+    .mobile-only .input-group{
+        margin: 0 auto;
+        max-width: 90%;
+    }
+
+    .desktop{
+        visibility: hidden;
+    }
+
+    .logo-mobile{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .logo-title{
+        font-size: 20px;
+        font-weight: bolder;
+    }
+
+    .input{
+        max-width: 100%;
+    }
+}

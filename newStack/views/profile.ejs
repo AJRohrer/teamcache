@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<!--landing page for Inspire lab, created on 9-17-17 by Sebastian Kurp -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your Homepage for InspireLab">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/mainstyle.css">
+    
+    <title>Home-InspireLab</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="js/mainpage.js"></script>
+
+</head>
+
+<body>
+    <nav>
+        <section class="il-container topNav">
+            <article class="il-item standardFontandColor desktop">
+                <span class="inspire">Inspire 
+                    <span class="lab">Lab</span>
+                </span>
+            </article>
+
+            <article class="il-item standardFontandColor mobile-only logo-mobile">
+                    <span class="inspire logo-title">Inspire 
+                            <span class="lab">Lab</span>
+                        </span>
+            </article>
+
+            <!-- class standardFontandColor has to be applied to <a> tag to override bootstrap -->
+            <article class="il-item standardFontandColor desktop">
+                <a class="standardFontandColor">My Projects</a>
+            </article>
+
+            <article class="il-item standardFontandColor desktop">
+                <a class="standardFontandColor">Favorites</a>
+            </article>
+
+            <article class="il-item standardFontandColor desktop">
+                <a class="standardFontandColor">Following</a>
+            </article>
+
+            <article class="il-item standardFontandColor desktop">
+                <a class="standardFontandColor">News Feed</a>
+            </article>
+
+            <article class="il-item search desktop">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search...">
+                    <div class="input-group-addon">
+                        <span class="searchicon glyphicon glyphicon-search"></span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="il-item standardFontandColor">
+                    <span onclick="openNav()" class="username standardFontandColor">Settings</span>
+            </article>
+            <article>
+                <span onclick="openNav()" class="fa fa-bars gear"></span>
+            </article>
+            <!--sidenav bar things -->
+            <div id="mySidenav" class="il-leftsidebar sidenav" >
+                    <div class="toppart">
+                        <div class="logo">
+                            <img class="logo" src="image\cloud.png" alt="Logo for InspireLab" >
+                        </div>
+                        <img id="profileImg" class="profile-avatar__image" src="image\profilepic.jpg" >
+                        <div class="userdiv">
+                            <span class="side-user"><%= returnobject.user.local.firstName %></span>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="closey closebtn" onclick="closeNav()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                    <div class="links">
+                        
+                        <div class="mobile-only">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Search...">
+                                <div class="input-group-addon">
+                                    <span class="searchicon glyphicon glyphicon-search"></span>
+                                </div>
+                            </div>
+                            <a>My Projects</a>
+                            <a>Favorites</a>
+                            <a>Following</a>
+                            <a>News Feed</a>
+                        </div>
+                        
+                        <a id="add">+Create a Project</a>
+                        <a onclick="displayFileUpload()">Change Profile Image</a>
+                        <div class="file-upload" id="file">
+                            <!-- user profile picture -->
+                            <span class="changePic">Change Profile Picture</span>
+                            <form class="file-form">
+                                <input type="file" id="fileName" accept="image/*">
+                            </form>
+                            <span class="file-close" id="file-close">&#10006</span>
+                        </div>
+                        <a class="log" href="/logout">Log Out</a>
+                    </div>
+                </div>
+        </section>
+    </nav>
+
+
+    <section class="il-container">
+        <!-- Create blank sidebar to center tiles in center of page-->
+        <article class="il-leftsidebar">
+            This should be whitespace
+        </article>
+        <!-- Create blank sidebar to center tiles in center of page-->
+
+        <!-- Create container for all tiles on the main page.-->
+        <article class="il-maincontent">
+            <section id="activitySpace" class="il-container">
+                
+                <% for(i=0; i<returnobject.projects.length; i++) { %>
+                    <!-- Each template is a container itself-->
+                    <section class="il-container-projectCard standardColor">
+                        <!-- The project information is in articles-->
+                        <article class="il-item-projectcard">
+                            <!-- This article has its own container inside but is still seen as one article to the parent container-->
+                            <section class="il-item-cardtitle">
+                                <article class="il-title">
+                                    <h2><%= returnobject.projects[i].title %></h2>
+                                </article>
+
+                                <article class="il-item-heart">
+                                    <span class="glyphicon glyphicon-heart" onclick="toggleFavorite(this)"></span>
+                                </article>
+                            </section>
+                            <!-- This article has its own container inside but is still seen as one article to the parent container-->
+                        </article>
+                        <% for (j=0; j < returnobject.projects[i].steps.length; j++) { %>
+                            <article class="il-item-projectcard ">
+                                <label> <%= returnobject.projects[i].steps[j] %> </label>
+                            </article>
+                        <% } %>
+
+                        <article class="il-item-projectcard ">
+                            <video class="cardMedia" controls >
+                                <source src='<%= returnobject.projects[i].media.video %>' type="video/mp4">
+                            </video>
+                        </article>
+
+                        <article class="il-item-projectcard">
+                            <img class="cardMedia" src='<%= returnobject.projects[i].media.picture %>' >
+                        </article>
+
+                        <article class="il-item-projectcard">
+                            <section class="il-container">
+                                <article class="il-item">
+                                    <span class="cardLinks">Share</span>
+                                </article>
+
+                                <article class="il-item">
+                                    <span class="cardLinks">Follow</span>
+                                </article>
+                            </section>
+                        </article>
+                        <!-- The project information is in articles-->
+                    </section>
+                    <% } %>
+                <!-- Each tile is contained in a template-->
+            </section>
+        </article>
+        <!-- Create container for all tiles on the main page.-->
+    </section>
+    <!--Update user profile -->
+    
+    <!--modal for creating projects -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h4>Create Your Tile</h4>
+                <h5>Enter some important details here later.</h5>
+            </div>
+            <div class="modal-body">
+                <form class="tileCreation" method="post" action="/addproject">
+                    <div>
+                        <label>
+                        Project Name:
+                            <input class="input" type="text" name="proname" placeholder="Project Name" required><br />
+                        </label>
+                    </div>
+                    <div id="dynamicInput">
+                        <label>
+                        Project Detail:
+                            <input class="input" type="text" name="detail1" placeholder="Details here..." required><br />
+                        </label>
+                    </div>
+                    <input class="clickme" type="button" value="Add another detail" onClick="addInput('dynamicInput');">                
+                    <input action="/addproject" class="clickme" type="submit" value="Click here to Create"> 
+                </form>
+            </div>
+        </div> 
+    </div>          
+    <script src="\js\mainpage.js"></script>
+    <script src="\js\addpromodal.js"></script>
+</body>
+
+</html>

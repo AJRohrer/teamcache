@@ -1,0 +1,29 @@
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/css/signupstyle.css" type="text/css" />
+  <title>Register InspireLab</title>
+  <script src="js\registrationScript.js"></script>   
+</head>
+
+
+<body>
+  <div class ="login-card">
+      <h1><span class="inspire">Inspire</span><span>Lab</span></h1>
+      <% if (message.length > 0) { %>
+        <div class="alert"><%= message %></div>
+    <% } %>
+      <h2>Register</h2>
+      <form  action="/signup" method="post">
+          <input type="text" name="firstName" placeholder ="First Name" required><br><br>
+          <input type="text" name="lastName" placeholder ="Last Name" required><br><br>
+          <input type="text" name="username" placeholder ="Username" required><br><br>
+          <input type ="email" name="email" placeholder="Email" required><br/><br>
+          <input type="password" name="password" placeholder="Password" required><br /><br>    
+          <input type="submit" name="submit" value="Submit"/>
+      </form>
+      <div class="login-help">
+          <p>Already have an account?</p>
+          <a href="/login">Login</a>
+      </div>
+  </div>
+</body>
