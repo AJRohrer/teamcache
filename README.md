@@ -13,6 +13,6 @@ Locally:
 4. Nagivate to localhost:8000 in your browser
 
 Heroku:
-1. Navigate to inspirelabdev.herokuapp.com
+1. Navigate to <https://inspirelabdev.herokuapp.com/>
 2. Register and prepare to be "inpsired"
 
