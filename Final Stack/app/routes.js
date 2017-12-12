@@ -112,7 +112,7 @@ module.exports = function (app, passport, projectModel, db) {
                 console.log("true");                
             }
         });
-        res.redirect('/');
+        res.redirect('/profile');
 
     });
 };
