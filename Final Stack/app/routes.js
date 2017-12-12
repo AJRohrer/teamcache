@@ -106,10 +106,10 @@ module.exports = function (app, passport, projectModel, db) {
 
         project.save(function(error, data){
             if (error){
-                res.json({value: false});
+                console.log("false");
             }
             else{
-                res.json({value: true});
+                console.log("true");                
             }
         });
 
