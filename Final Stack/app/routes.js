@@ -112,8 +112,7 @@ module.exports = function (app, passport, projectModel, db) {
                 console.log("true");                
             }
         });
-
-        console.log(req.body.proname);
+        res.redirect('/');
 
     });
 };
